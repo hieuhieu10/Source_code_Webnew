@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 //nhúng vào newservice
 @Component // dependence injection đối với class nào đó
-public class NewConverter {
+public class  NewConverter {
     //convert data từ newdto wa entity
     public NewEntity toEntity(NewDTO dto){
         NewEntity entity=new NewEntity();
@@ -26,7 +26,6 @@ public class NewConverter {
     }
 
     public NewEntity toEntity(NewDTO dto, NewEntity entity){
-
         entity.setTitle(dto.getTitle());
         entity.setContent(dto.getContent());
         entity.setShortDescription(dto.getShortDescriptionn());

@@ -23,7 +23,7 @@ public class NewApi {
     public NewDTO UpdateNew(@RequestBody NewDTO model , @PathVariable("id") long id) //@RequestBody là đối tượng giúp nhận data từ client
     {
         model.setId(id);
-        return newService.update(model);
+        return newService.save(model);
     }
     @DeleteMapping (value = "/new")
     public void DeleteNew(@RequestBody long[] ids) //@RequestBody là đối tượng giúp nhận data từ client
