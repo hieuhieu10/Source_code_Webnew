@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 public class AbstractDTO<T> {
-        private long id;
+        private Long id;
         private String createdBy;
         private Date createdDate;
         private String modifiedBy;

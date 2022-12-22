@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Long> {
     //find lấy dữ liệu
     CategoryEntity findOneByCode(String code);
+
 }

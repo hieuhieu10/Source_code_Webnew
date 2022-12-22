@@ -1,25 +1,16 @@
 package com.newwebproject.Entity;
-import lombok.Data;
 
 import jakarta.persistence.*;
-
-import java.util.Date;
+import lombok.Data;
 
 @Entity
 @Table(name = "new")
 @Data
-public class NewEntity {
+public class NewEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//hỗ trợ tự động tăng
-    private Integer id;
-    @Column
-    private String createdBy;
-    @Column
-    private Date createdDate;
-    @Column
-    private String modifiedBy;
-    @Column
-    private Date modifiedDate;
+    private Long id;
+
     @Column // tạo column trong database table
     private String title;
     @Column //(name = "thumbnail") name để nó gener vào database

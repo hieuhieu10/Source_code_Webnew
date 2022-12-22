@@ -1,28 +1,18 @@
 package com.newwebproject.Entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import jakarta.persistence.*;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
 @Table(name = "User")
 @Data
-public class UserEntity {
+public class UserEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//hỗ trợ tự động tăng
-    private Integer id;
-    @Column
-    private String createdBy;
-    @Column
-    private Date createdDate;
-    @Column
-    private String modifiedBy;
-    @Column
-    private Date modifiedDate;
+    private Long id;
     @Column
     private String userName;
     @Column

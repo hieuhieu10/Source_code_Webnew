@@ -1,28 +1,15 @@
 package com.newwebproject.Entity;
-
-import lombok.Data;
-
 import jakarta.persistence.*;
-
+import lombok.Data;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
 @Entity
 @Table(name = "role")
 @Data
-public class RoleEntity {
+public class RoleEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//hỗ trợ tự động tăng
-    private Integer id;
-    @Column
-    private String createdBy;
-    @Column
-    private Date createdDate;
-    @Column
-    private String modifiedBy;
-    @Column
-    private Date modifiedDate;
+    private Long id;
     @Column
     private String code;
     @Column

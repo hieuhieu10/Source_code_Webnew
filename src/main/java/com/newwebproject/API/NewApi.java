@@ -19,15 +19,29 @@ public class NewApi {
     {
         return newService.save(model) ;
     }
-    @PutMapping (value = "/new/{id}")//@PathVariable("id") để lấy đừng dẫn "/new/{id}"
-    public NewDTO UpdateNew(@RequestBody NewDTO model , @PathVariable("id") long id) //@RequestBody là đối tượng giúp nhận data từ client
+    @PutMapping (value = "/new")//@PathVariable("id") để lấy đừng dẫn "/new/{id}"
+    public NewDTO UpdateNew(@RequestBody NewDTO model ) //@RequestBody là đối tượng giúp nhận data từ client
     {
-        model.setId(id);
+
         return newService.save(model);
     }
+
+//    @DeleteMapping (value = "/new/{id}")
+//    public void DeleteNew(@RequestBody Long ids) //@RequestBody là đối tượng giúp nhận data từ client
+//    {
+//        newService.delete(ids);
+//    }
+
     @DeleteMapping (value = "/new")
     public void DeleteNew(@RequestBody long[] ids) //@RequestBody là đối tượng giúp nhận data từ client
     {
-
+        newService.delete(ids);
     }
+
+    @GetMapping (value = "/new")
+    public NewDTO getNew (@RequestBody NewDTO model)
+    {
+        return newService.get(model);
+    }
+
 }
