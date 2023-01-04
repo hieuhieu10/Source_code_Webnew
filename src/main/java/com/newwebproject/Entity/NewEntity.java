@@ -20,6 +20,7 @@ public class NewEntity extends BaseEntity{
     @Column
     private String content;
 
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private CategoryEntity category;

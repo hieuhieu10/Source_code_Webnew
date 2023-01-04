@@ -5,12 +5,12 @@ import com.newwebproject.Entity.NewEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import java.util.List;
+
 @EnableJpaRepositories
 
 public interface NewRepository extends JpaRepository< NewEntity, Long> {
 
-    //void delete(Long ids );
 
-
-//  void delete(long item);
+    List<NewEntity> findByCategory( Long id);
 }
